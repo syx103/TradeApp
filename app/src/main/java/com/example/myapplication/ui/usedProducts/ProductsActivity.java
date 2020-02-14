@@ -1,13 +1,18 @@
 package com.example.myapplication.ui.usedProducts;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.example.myapplication.R;
+import com.example.myapplication.ui.MainActivity;
 
 public class ProductsActivity extends AppCompatActivity {
 
@@ -21,5 +26,11 @@ public class ProductsActivity extends AppCompatActivity {
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
 
+
+    }
+
+    public void jumpToMain(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
