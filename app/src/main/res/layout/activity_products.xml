@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable name="viewModel" type="com.example.myapplication.ui.usedProducts.ProductsUrlViewModel" />
+        <variable name="viewModel" type="com.example.myapplication.ui.productList.ProductListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,9 +13,10 @@
         tools:context=".ui.usedProducts.ProductsActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_sport"
             android:layout_width="90dp"
             android:layout_height="120dp"
-            app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+            app:layout_constraintStart_toStartOf="@+id/cl_clean"
             app:layout_constraintTop_toTopOf="@+id/guideline7">
 
             <TextView
@@ -40,7 +41,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout4"
+            android:id="@+id/cl_toy"
             android:layout_width="90dp"
             android:layout_height="120dp"
             app:layout_constraintStart_toStartOf="@+id/cl_furniture"
@@ -269,7 +270,7 @@
             app:layout_constraintGuide_percent="0.5" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
+            android:id="@+id/cl_art"
             android:layout_width="90dp"
             android:layout_height="120dp"
             app:layout_constraintStart_toStartOf="@+id/cl_book"
@@ -298,7 +299,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout2"
+            android:id="@+id/cl_clean"
             android:layout_width="90dp"
             android:layout_height="120dp"
             app:layout_constraintStart_toStartOf="@+id/cl_life"
@@ -327,10 +328,10 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout3"
+            android:id="@+id/cl_drink"
             android:layout_width="90dp"
             android:layout_height="120dp"
-            app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+            app:layout_constraintStart_toStartOf="@+id/cl_toy"
             app:layout_constraintTop_toTopOf="@+id/guideline6">
 
             <TextView
@@ -362,9 +363,10 @@
             app:layout_constraintGuide_percent="0.7" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_medicine"
             android:layout_width="90dp"
             android:layout_height="120dp"
-            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintStart_toStartOf="@+id/cl_art"
             app:layout_constraintTop_toTopOf="@+id/guideline7">
 
             <TextView
@@ -392,7 +394,7 @@
             android:id="@+id/cl_others"
             android:layout_width="90dp"
             android:layout_height="120dp"
-            app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
+            app:layout_constraintStart_toStartOf="@+id/cl_drink"
             app:layout_constraintTop_toTopOf="@+id/guideline7">
 
             <ImageView
