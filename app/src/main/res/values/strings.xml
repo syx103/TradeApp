@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">易物</string>
+    <string name="details_title">商品详情</string>
+    <string name="details_catagory">商品类型</string>
+    <string name="details_location">交易地点</string>
+    <string name="details_contact">联系人</string>
+    <string name="details_tel">联系电话</string>
+    <string name="details_qq">QQ号码</string>
+    <string name="details_describe">详细描述</string>
+    <string name="details_newDegree">新旧程度</string>
+    <string name="details_product_describe">商品描述</string>
+    <string name="proList_title">商品列表</string>
+    <string name="prolist_yuan">元</string>
+    <string name="prolist_image">商品列表子项图片</string>
+    <string name="comment_title">评论</string>
+    <string name="proDetails_image_title">商品照片</string>
+    <string name="prolist_title">商品列表</string>
+    <string name="details_price">期望价格</string>
+    <string name="details_call">联系卖家</string>
 </resources>

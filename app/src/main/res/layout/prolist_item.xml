@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <import type="com.example.myapplication.data.bean.ItemInfo"/>
         <variable name="listitem" type="ItemInfo" />
@@ -19,7 +17,7 @@
             android:layout_marginStart="20dp"
             android:text="@{listitem.title}"
             android:textColor="#0BACEC"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/iv_itemImage"
             app:layout_constraintTop_toTopOf="@+id/iv_itemImage" />
 
@@ -30,11 +28,12 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            app:imageUrl="@{listitem.imageUrl}"
+            app:imageUrl="@{listitem.imageUrl.get(0)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/screen_background_light_transparent" />
+            app:srcCompat="@android:drawable/screen_background_light_transparent"
+            android:contentDescription="@string/prolist_image" />
 
         <TextView
             android:id="@+id/tv_content"
@@ -51,7 +50,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:text="元"
+            android:textSize="20sp"
+            android:text="@string/prolist_yuan"
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tv_title" />
@@ -61,8 +61,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:text="@{listitem.price}"
+            android:text="@{String.valueOf(listitem.price)}"
             android:textColor="#FF0000"
+            android:textSize="20sp"
             app:layout_constraintEnd_toStartOf="@+id/textView10"
             app:layout_constraintTop_toTopOf="@+id/tv_title" />
 

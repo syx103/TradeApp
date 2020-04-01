@@ -1,16 +1,12 @@
 package com.example.myapplication.data.network.Service;
 
-import com.example.myapplication.data.bean.ItemInfo;
+import com.example.myapplication.data.bean.ProItemOuter;
 
-import java.util.List;
-
+import io.reactivex.Observable;
 import retrofit2.Call;
-import retrofit2.http.Field;
-import retrofit2.http.FormUrlEncoded;
-import retrofit2.http.POST;
+import retrofit2.http.GET;
 
 public interface ProductsInfoService {
-    @POST
-    @FormUrlEncoded
-    Call<List<ItemInfo>> getInfoList(@Field("category") String category);
+    @GET("school/second/merchandiseList")
+    Call<ProItemOuter> getInfoList();
 }

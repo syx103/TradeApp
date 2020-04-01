@@ -1,15 +1,34 @@
 package com.example.myapplication.data.bean;
 
-public class ItemInfo {
+import androidx.databinding.BaseObservable;
+
+import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
+
+public class ItemInfo extends BaseObservable {
+
+    @SerializedName("productId")
+    private int id;
     private String title;
     private String content;
+    @SerializedName("createTime")
     private String time;
     private String location;
-    private String imageUrl;
+    @SerializedName("images")
+    private List<String> imageUrl;
     private int price;
 
     public ItemInfo getItemInfo() {
         return this;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -44,11 +63,11 @@ public class ItemInfo {
         this.location = location;
     }
 
-    public String getImageUrl() {
+    public List<String> getImageUrl() {
         return imageUrl;
     }
 
-    public void setImageUrl(String imageUrl) {
+    public void setImageUrl(List<String> imageUrl) {
         this.imageUrl = imageUrl;
     }
 
